@@ -1,0 +1,5 @@
+cd deployment_templates
+terraform plan -var-file=../zazou-thunderchild-test/s3/s3.tfvars -var-file=../zazou-thunderchild-test/ecs/ecs.tfvars -var-file=../zazou-thunderchild-test/iam/iam.tfvars -var-file=../zazou-thunderchild-test/secrets-manager/secrets-manager.tfvars -var-file=../zazou-thunderchild-test/ecs-task/ecs-task.tfvars 
+terraform apply -var-file=../zazou-thunderchild-test/s3/s3.tfvars -var-file=../zazou-thunderchild-test/ecs/ecs.tfvars -var-file=../zazou-thunderchild-test/iam/iam.tfvars -var-file=../zazou-thunderchild-test/secrets-manager/secrets-manager.tfvars -var-file=../zazou-thunderchild-test/ecs-task/ecs-task.tfvars 
+terraform state list
+terraform destroy -var-file=../zazou-thunderchild-test/s3/s3.tfvars -var-file=../zazou-thunderchild-test/ecs/ecs.tfvars -var-file=../zazou-thunderchild-test/iam/iam.tfvars -var-file=../zazou-thunderchild-test/secrets-manager/secrets-manager.tfvars -var-file=../zazou-thunderchild-test/ecs-task/ecs-task.tfvars 
